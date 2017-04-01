@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins, Arial, sans-serif;
+}
+
+.sub-title {
+    color: #000000;
+    text-align: center;
+    font-size: 86px;
+    font-weight: 400;
+    line-height: 90px;
+    text-transform: uppercase;
+}
+
+.title {
+    color: #303030;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.slider-cont {
+    width: 100%;
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.slider-item-cont {
+    max-width: 33%;
+    padding: 10px;
+}
+
+.slider-item-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.slider-item-link img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-item-info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: rgba(49, 232, 171, 0.9);
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+}
+
+.slider-item-link:hover .slider-item-info {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+.slider-item-info:hover {
+    background-color: rgba(49, 232, 171, 0.9);
+}
+
+.slider-item__name,
+.slider-item__date,
+.slider-item__author {
+    display: block;
+    color: #ffffff;
+    text-align: left;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.slider-item__name,
+.slider-item__date {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.slider-item__author {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.slick-prev, .slick-prev:hover, .slick-prev:focus,
+.slick-next, .slick-next:hover, .slick-next:focus {
+    background-image: url(../images/arrows_slider.png);
+    width: 98px;
+    height: 96px;
+}
+
+.slick-next, .slick-next:hover, .slick-next:focus {
+    background-position: 98px 0;
+    right: 5px;
+}
+
+.slick-prev, .slick-prev:hover, .slick-prev:focus {
+    background-position: 0 0;
+    left: 5px;
+}
+
+.slick-next:before {
+    content: "";
+}
+
+.slick-prev:before {
+    content: "";
+}
